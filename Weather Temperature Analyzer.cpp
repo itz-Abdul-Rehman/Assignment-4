@@ -3,7 +3,7 @@
 #include <iomanip>
 using namespace std;
 float temperature[7][4];
-void dataInput(float temp[7][4])
+void dataInput()
 {
     for (int i = 0; i < 7; i++)
     {
@@ -11,7 +11,7 @@ void dataInput(float temp[7][4])
         for (int j = 0; j < 4; j++)
         {
             cout << "Temperature " << j + 1 << ": ";
-            cin >> temp[i][j];
+            cin >> temperature[i][j];
         }
         cout << endl;
     }
@@ -75,7 +75,7 @@ void display(float temps[7][4], vector<float> &avgTemps, float high, float low){
 }
 int main()
 {
-    dataInput(temperature); 
+    dataInput(); 
     vector<float> avgTemps;
     float highest = highestTemp(temperature);
     float lowest = lowestTemp(temperature);
